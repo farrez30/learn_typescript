@@ -9,6 +9,7 @@ describe('Optional Parameter', () => {
                 return "Hello null";
             }
             else if (name === undefined) {
+                return "Hello undefined";
             }
         }
         sayHello("Ayam wooooooooooooooooo");
@@ -19,7 +20,7 @@ describe('Optional Parameter', () => {
         console.log("Hello null:", sayHello(null));
         console.log("Hello ayam:", sayHello("Ayam wooooooooooooooooo"));
         expect(sayHello("Ayam wooooooooooooooooo")).toBe("Hello Ayam wooooooooooooooooo");
-        expect(sayHello(name)).toBe("Hello");
-        expect(sayHello(null)).toBe("Hello");
+        expect(sayHello(name)).toBe("Hello undefined");
+        expect(sayHello(null)).toBe("Hello null");
     });
 });
